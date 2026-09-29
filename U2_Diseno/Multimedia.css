@@ -1,0 +1,576 @@
+/* ======================================
+   CONFIGURACIÓN GENERAL
+====================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #f2f1ee;
+    color: #111;
+
+    font-family: Georgia, "Times New Roman", serif;
+}
+
+
+/* ======================================
+   PORTADA
+====================================== */
+
+.hero {
+    min-height: 100vh;
+
+    background-color: #050505;
+
+    color: white;
+
+    position: relative;
+
+    overflow: hidden;
+}
+
+
+/* ======================================
+   MENÚ
+====================================== */
+
+.navbar {
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+
+    height: 90px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    padding: 0 8%;
+
+    z-index: 10;
+}
+
+
+.logo {
+    color: white;
+
+    text-decoration: none;
+
+    font-size: 23px;
+
+    letter-spacing: 5px;
+}
+
+
+.menu {
+    display: flex;
+
+    gap: 45px;
+}
+
+
+.menu a {
+    color: white;
+
+    text-decoration: none;
+
+    font-size: 14px;
+
+    letter-spacing: 1px;
+
+    padding-bottom: 8px;
+
+    transition: 0.3s;
+}
+
+
+.menu a:hover {
+    opacity: 0.5;
+}
+
+
+.menu .activo {
+    border-bottom: 2px solid white;
+}
+
+
+/* ======================================
+   TEXTO PRINCIPAL
+====================================== */
+
+.hero-contenido {
+    position: relative;
+
+    z-index: 5;
+
+    width: 60%;
+
+    min-height: 100vh;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    padding-left: 10%;
+}
+
+
+.subtitulo {
+    color: #aaa;
+
+    font-size: 14px;
+
+    letter-spacing: 8px;
+
+    margin-bottom: 25px;
+}
+
+
+.hero h1 {
+    font-size: clamp(70px, 10vw, 145px);
+
+    font-weight: normal;
+
+    letter-spacing: -6px;
+
+    line-height: 0.9;
+
+    margin-bottom: 30px;
+}
+
+
+.linea {
+    width: 430px;
+
+    height: 2px;
+
+    background-color: #999;
+
+    margin-bottom: 25px;
+}
+
+
+.frase {
+    color: #ccc;
+
+    font-size: 18px;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 35px;
+}
+
+
+/* ======================================
+   BOTÓN
+====================================== */
+
+.boton {
+    width: fit-content;
+
+    padding: 17px 40px;
+
+    border: 2px solid white;
+
+    color: white;
+
+    text-decoration: none;
+
+    font-size: 14px;
+
+    letter-spacing: 2px;
+
+    transition: 0.3s;
+}
+
+
+.boton:hover {
+    background-color: white;
+
+    color: black;
+}
+
+
+/* ======================================
+   SILUETA DE MUJER
+====================================== */
+
+.silueta {
+    position: absolute;
+
+    right: -15%;
+
+    bottom: 0;
+
+    width: 65%;
+
+    height: 100%;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: flex-end;
+
+    z-index: 2;
+}
+
+
+.silueta img {
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: contain;
+
+    object-position: right bottom;
+
+    mix-blend-mode: screen;
+
+    opacity: 0.95;
+}
+
+
+/* ======================================
+   TIENDA
+====================================== */
+
+.tienda {
+    padding: 110px 8%;
+
+    text-align: center;
+
+    background-color: #f2f1ee;
+}
+
+
+.mini-titulo {
+    color: #777;
+
+    font-size: 13px;
+
+    letter-spacing: 5px;
+
+    margin-bottom: 15px;
+}
+
+
+.tienda h2,
+.nosotros h2,
+.contacto h2 {
+    font-size: 55px;
+
+    font-weight: normal;
+
+    margin-bottom: 25px;
+}
+
+
+.linea-negra {
+    width: 70px;
+
+    height: 2px;
+
+    background-color: #111;
+
+    margin: 0 auto 60px;
+}
+
+
+/* ======================================
+   PRODUCTOS
+====================================== */
+
+.productos {
+    max-width: 1150px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 30px;
+}
+
+
+.producto {
+    background-color: white;
+
+    padding-bottom: 25px;
+
+    transition: 0.3s;
+}
+
+
+.producto:hover {
+    transform: translateY(-8px);
+}
+
+
+.foto-producto {
+    height: 400px;
+
+    background-color: #151515;
+
+    display: flex;
+
+    align-items: flex-end;
+
+    justify-content: flex-start;
+
+    padding: 20px;
+
+    color: white;
+}
+
+
+.foto-producto span {
+    font-size: 13px;
+
+    letter-spacing: 3px;
+}
+
+
+.producto h3 {
+    font-size: 25px;
+
+    font-weight: normal;
+
+    margin-top: 25px;
+}
+
+
+.producto p {
+    color: #777;
+
+    margin: 8px 0 15px;
+}
+
+
+.producto strong {
+    font-size: 16px;
+}
+
+
+/* ======================================
+   NOSOTROS
+====================================== */
+
+.nosotros {
+    min-height: 600px;
+
+    background-color: #0a0a0a;
+
+    color: white;
+
+    display: flex;
+
+    align-items: center;
+}
+
+
+.nosotros-contenido {
+    width: 600px;
+
+    max-width: 90%;
+
+    margin-left: 12%;
+}
+
+
+.nosotros h2 {
+    margin-bottom: 30px;
+}
+
+
+.nosotros-contenido > p:not(.mini-titulo) {
+    color: #ccc;
+
+    font-size: 17px;
+
+    line-height: 1.9;
+
+    margin-bottom: 20px;
+}
+
+
+/* ======================================
+   CONTACTO
+====================================== */
+
+.contacto {
+    padding: 120px 20px;
+
+    text-align: center;
+
+    background-color: #e5e2dc;
+}
+
+
+.contacto h2 {
+    margin-bottom: 15px;
+}
+
+
+.contacto p {
+    margin-bottom: 30px;
+
+    color: #555;
+}
+
+
+.boton-negro {
+    display: inline-block;
+
+    padding: 17px 40px;
+
+    background-color: #111;
+
+    border: 2px solid #111;
+
+    color: white;
+
+    text-decoration: none;
+
+    letter-spacing: 2px;
+
+    transition: 0.3s;
+}
+
+
+.boton-negro:hover {
+    background-color: transparent;
+
+    color: #111;
+}
+
+
+/* ======================================
+   FOOTER
+====================================== */
+
+footer {
+    background-color: #050505;
+
+    color: white;
+
+    text-align: center;
+
+    padding: 45px 20px;
+}
+
+
+footer h3 {
+    font-size: 28px;
+
+    font-weight: normal;
+
+    letter-spacing: 7px;
+
+    margin-bottom: 15px;
+}
+
+
+footer p {
+    color: #777;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 13px;
+}
+
+
+/* ======================================
+   CELULAR
+====================================== */
+
+@media (max-width: 800px) {
+
+    .navbar {
+        height: auto;
+
+        padding: 25px;
+
+        flex-direction: column;
+
+        gap: 25px;
+    }
+
+
+    .menu {
+        gap: 18px;
+    }
+
+
+    .menu a {
+        font-size: 11px;
+    }
+
+
+    .hero-contenido {
+        width: 100%;
+
+        padding: 180px 30px 100px;
+
+        text-align: center;
+
+        align-items: center;
+    }
+
+
+    .hero h1 {
+        font-size: 70px;
+    }
+
+
+    .linea {
+        width: 80%;
+    }
+
+
+    .silueta {
+        width: 70%;
+
+        opacity: 0.35;
+    }
+
+
+    .productos {
+        grid-template-columns: 1fr;
+    }
+
+
+    .tienda h2,
+    .nosotros h2,
+    .contacto h2 {
+        font-size: 40px;
+    }
+
+
+    .nosotros {
+        padding: 100px 30px;
+    }
+
+
+    .nosotros-contenido {
+        margin-left: 0;
+
+        max-width: 100%;
+    }
+
+}
